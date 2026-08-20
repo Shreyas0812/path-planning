@@ -21,7 +21,7 @@ int main() {
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
     };
 
-    BFS bfsPlanner(grid);
+    BFS bfsPlanner(grid, {3, 3}, {12, 14});
     bfsPlanner.planPath();
 
     return 0;
