@@ -4,19 +4,25 @@
 
 class PathPlanner {
 public:
-    using Grid = std::vector<std::vector<int>>;
+    using GridType = std::vector<std::vector<int>>;
 
-    explicit PathPlanner(Grid grid) : grid_(std::move(grid)) {}
+    explicit PathPlanner(GridType initial_grid) : grid_(std::move(initial_grid)) {}
 
     virtual ~PathPlanner() = default;
 
     virtual void planPath() = 0;
 
 protected:
-    const Grid& grid() const {
+    const GridType& grid() const {
         return grid_;
     }
+    const std::vector<std::pair<int, int>> neighbours = {
+        {-1, 0}, // Up
+        {1, 0},  // Down
+        {0, -1}, // Left
+        {0, 1}   // Right
+    };
 
 private:
-    Grid grid_;
+    GridType grid_;
 };
