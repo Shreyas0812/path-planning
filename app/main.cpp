@@ -2,7 +2,7 @@
 #include <bfs.hpp>
 
 int main() {
-    PathPlanner::Grid grid = {
+    PathPlanner::GridType grid = {
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
